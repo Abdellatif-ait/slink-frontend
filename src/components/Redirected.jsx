@@ -10,7 +10,7 @@ const Redirected = () => {
           seturl(res.data)
         }
         seek()
-    },[])
+    },[id])
   return (
     <>
     <div className='absolute p-4 top-1/2 left-1/2 align-middle  text-white text-2xl bg-black/40 '> 

@@ -15,7 +15,7 @@ const Links = () => {
             }
         }
         seek()
-    },[])
+    },[url,user])
   return (
     <div className='grid grid-cols-2 gap-4 bg-white m-8'>
         <div className='p-4 bg-white opacity-100 border-r-2'>
