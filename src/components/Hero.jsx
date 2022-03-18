@@ -10,7 +10,7 @@ const Hero = () => {
   const hundleSubmit =async (e) => {
     e.preventDefault();
     if(user){
-      const {data:res}=await axios.post("https://slinkbackend.herokuapp.com/link/add",{user,fullLink})
+      await axios.post("https://slinkbackend.herokuapp.com/link/add",{user,fullLink})
       window.location.reload()
     }else{
       window.location="/LogInPage"

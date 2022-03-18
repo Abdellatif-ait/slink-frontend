@@ -5,13 +5,16 @@ const Links = () => {
     const [url,seturl]=useState([{fullLink:"",shortLink:""}])
     const user=localStorage.getItem('token')
     
-    useEffect(async ()=>{
-        if(user){
-            const res=await axios.get("https://slinkbackend.herokuapp.com/link/"+user)
-            seturl(res.data)
-        }else{
-            window.location="/LogInPage"
+    useEffect(()=>{
+        async function seek(){
+            if(user){
+                const res=await axios.get("https://slinkbackend.herokuapp.com/link/"+user)
+                seturl(res.data)
+            }else{
+                window.location="/LogInPage"
+            }
         }
+        seek()
     },[])
   return (
     <div className='grid grid-cols-2 gap-4 bg-white m-8'>
