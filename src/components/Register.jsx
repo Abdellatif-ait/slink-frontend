@@ -18,7 +18,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post("https://slinkbackend.herokuapp.com//user/register", { username, email, password })
+            await axios.post("https://slinkbackend.herokuapp.com//user/register", { username, email, password })
             window.location = "/LogInPage"
         } catch (error) {
             setError("something wrong check your info:pw must contains Uper,symbol,number")

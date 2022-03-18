@@ -11,7 +11,6 @@ const NavBar = () => {
             Link: "/LinksPage"
         }
     ]
-    const [Log,setLog]=useState("")
     useEffect(()=>{
         localStorage.getItem("token")
     },[])
